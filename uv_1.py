@@ -2,7 +2,6 @@ import time
 import board
 import adafruit_veml6070
 import serial
-import RPi.GPIO as GPIO
 from gpiozero import LED
 
 grün=LED(13)
