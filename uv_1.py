@@ -1,7 +1,18 @@
+import time
 import board
 import adafruit_veml6070
-import time
 import serial
+import RPi.GPIO as GPIO
+from time import sleep
+from gpiozero import LED
+
+gelb=LED(16)
+grün=LED(13)
+rot=LED(6)
+
+rot2=LED(24)
+grün2=LED(22)
+gelb2=LED(17)
 
 ser = serial.Serial ("/dev/ttyS0", 9600)
 
