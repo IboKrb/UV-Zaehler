@@ -32,34 +32,26 @@ with board.I2C() as i2c:
         uv2_zahl=int(received_data)
         print("UV:"uv2_zahl)
         
-         if uv_zahl >= 500 :
+         if uv_zahl >= 0 :
             grün.on()
-        if uv_zahl >= 900 :
+        if uv_zahl >= 600 :
             gelb.on()
         if uv_zahl >= 1200 :
             rot.on()
-        if uv_zahl < 500:
-            grün.off()
-        if uv_zahl < 900:
+        if uv_zahl < 600:
             gelb.off()
         if uv_zahl < 1200:
             rot.off()
             
-        if uv2_zahl >= 500 :
-            grün2.on()
-            
-        if uv2_zahl >= 900 :
-            gelb2.on()
-            
+        if uv2_zahl >= 0 :
+            grün2.on()         
+        if uv2_zahl >= 600:
+            gelb2.on()    
         if uv2_zahl >= 1200 :
             rot2.on()
-            
-        if uv2_zahl < 500:
-            grün2.off()
-            
-        if uv2_zahl < 900:
+        if uv2_zahl < 600:
             gelb2.off()
-            
+ 
         if uv2_zahl < 1200:
             rot2.off()
         
